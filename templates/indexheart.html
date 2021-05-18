@@ -1,0 +1,60 @@
+{% extends "base.html" %}
+
+{% block title %}Heart Disease{% endblock %}
+
+{% block content %}
+	<div class="block">
+          <section class="hero is-dark is-bold">
+              <div class="hero-body">
+                  <div class="container has-text-centered">
+                      <h1 class="title">Result Prediction</h1>
+                      <h2 class="subtitle">Predict the Heart Disease</h2>
+                  </div><br>
+                
+              </div></section>
+			  </div>
+			  
+			  
+			  
+        
+		
+		
+	<div class="container bg-dark text-white">	
+    <form action='/heart/predict' method="post">
+      <table class="table table-dark table-striped">
+		<tr class="table-primary"><td> Age 
+			<td>  <input  name="age"  placeholder="Age (in years) " >
+        </tr>
+        <tr class="table-success"><td>  Sex
+            <td>  <input  name="sex" placeholder="sex(1 = male; 0 = female)" > 
+		</tr>
+		<tr class="table-danger"><td> Chest pain type
+			<td>  <input  name="cp"  placeholder="chest pain type " >
+        </tr >
+        <tr class="table-active"><td> Resting blood pressure
+            <td>  <input  name="trestbps" placeholder="resting blood pressure" > 
+		</tr>
+		<tr class="table-active"><td> Serum cholestoral 
+            <td>  <input  name="chol" placeholder="serum cholestoral (in mg/dl)" > 
+		</tr>
+		<tr class="table-active"><td> fbs 
+            <td>  <input  name="fbs" placeholder="fbs" > 
+		</tr>
+		<tr class="table-active"><td> restecg 
+            <td>  <input  name="restecg" placeholder="restecg (0 or 1)" > 
+		</tr>
+		<tr class="table-active"><td> thalach 
+            <td>  <input  name="thalach" placeholder="thalach" > 
+		</tr>
+		
+		
+        <tr>
+		<td colspan=2 align=center><br><button class="btn btn-primary active" type="submit">Predict </button>
+		</tr>
+	  </table>
+    </form>
+       </div>
+     <br> {{pred}}<br> 
+	 
+
+{% endblock %}

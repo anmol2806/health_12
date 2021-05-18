@@ -1,0 +1,41 @@
+{% extends "base.html" %}
+
+{% block title %}Home Page{% endblock %}
+
+{% block content %}
+  <div class="block">
+          <section class="hero is-dark is-bold">
+              <div class="hero-body">
+                  <div class="container has-text-centered">
+                      <h1 class="title">Result Prediction</h1>
+                      <h2 class="subtitle">Predict the Heart Disease</h2>
+                  </div><br>
+                
+              </div></section>
+			  </div>
+	 <div class="card-content">
+                  <div class="media-content">
+                    
+                      <p class="title">I think it is {{pred}}</p>
+					  </div>
+  </div>
+  <!--  <div class="container has-text-centered">
+                        <div class="card-image">
+                                <figure class="image is-3by2">
+                                    {% if pred == ['Iris-versicolor'] %}
+                                      <img src="/static/iris_versicolor.jpg" alt="" height="500" width="500">
+            
+                                      {% elif pred == ['Iris-setosa'] %}
+                                      <img src="/static/iris_setosa.jpg" alt="" height="500" width="500">
+            
+                                      {% elif pred == ['Iris-virginica'] %}
+                                      <img src="/static/iris_virginica.jpg" alt="" height="500" width="500">
+            
+                                      {% else %}
+                                      <p></p>
+            
+                                      {% endif %}
+                                </figure>
+                            </div>
+                </div>-->
+    {% endblock %}
